@@ -2,7 +2,7 @@
 #include <iostream>
 #include <thread>
 
-void display(int index) {
+void Display(int index) {
   //std::cout << "我是线程 " << index << std::endl;
 }
 
@@ -10,7 +10,7 @@ int main() {
   // 默认构造 trd1
   std::thread trd1;
   // 正常构造 trd2
-  std::thread trd2(display, 1);
+  std::thread trd2(Display, 1);
   // 移动构造 trd3
   std::thread trd3(std::move(trd2));
 

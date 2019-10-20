@@ -2,7 +2,7 @@
 #include <iostream>
 #include <thread>
 
-void display(int index) {
+void Display(int index) {
   //std::cout << "我是线程 " << index << std::endl;
 }
 
@@ -10,7 +10,7 @@ int main() {
   std::thread trds[3];
 
   for(int i = 0; i < 3; i++)
-    trds[i] = std::thread(display, i + 1);
+    trds[i] = std::thread(Display, i + 1);
 
   for(int i = 0; i < 3; i++) {
     // 线程ID 的类型为 std::thread::id
