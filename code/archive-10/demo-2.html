@@ -1,0 +1,29 @@
+<!-- 自适应高度输入框-实现方式二 -->
+
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>demo-2</title>
+  <style>
+    .container {
+      width: 500px;
+      font-size: 14px;
+      line-height: 16px;
+      border: solid 1px #999;
+    }
+    .container:empty::before {
+      content: "输入消息...";
+      color: #999999;
+    }
+    .container:focus::before {
+      content: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" contenteditable="true"></div>
+</body>
+
+</html>

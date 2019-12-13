@@ -1,0 +1,50 @@
+<!-- 自适应高度输入框-实现方式一 -->
+
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+   <meta charset="UTF-8">
+   <title>demo-1</title>
+   <style>
+      .container {
+         width: 500px;
+         position: relative;
+         font-size: 14px;
+         line-height: 16px;
+      }
+
+      .container div {
+         visibility: hidden;
+         padding: 8px 0px;
+      }
+
+      .container textarea {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0px;
+         padding: 0px;
+         font-size: inherit;
+         line-height: inherit;
+         resize: none;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <div></div>
+      <textarea placeholder="输入消息..."></textarea>
+   </div>
+
+   <script>
+      const textarea = document.querySelector('.container textarea');
+      const div = document.querySelector('.container div');
+      textarea.addEventListener('input', (e) => {
+         div.innerText = e.target.value;
+      });
+   </script>
+</body>
+
+</html>
