@@ -1,0 +1,45 @@
+<!-- flex-grow -->
+
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>demo-1</title>
+  <style>
+    .parent {
+      width: 600px;
+      display: flex;
+      text-align: center;
+      color: #eee;
+    }
+
+    .child1 {
+      flex-basis: 50px;
+      flex-grow: 1;
+      background-color: #0066CC;
+    } 
+
+    .child2 {
+      flex-basis: 100px;
+      flex-grow: 1;
+      background-color: #009900;
+    }
+
+    .child3 {
+      flex-basis: 150px;
+      flex-grow: 1;
+      background-color: #CC3300;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child1">50px + 100px</div>
+    <div class="child2">100px + 100px</div>
+    <div class="child3">150px + 100px</div>
+  </div>
+</body>
+
+</html>
