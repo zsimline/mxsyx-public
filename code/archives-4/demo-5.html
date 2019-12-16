@@ -1,0 +1,45 @@
+<!-- flex-shrink -->
+
+<!DOCTYPE HTML>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>demo-1</title>
+  <style>
+    .parent {
+      width: 600px;
+      display: flex;
+      text-align: center;
+      color: #eee;
+    }
+
+    .child1 {
+      flex-basis: 100px;
+      flex-shrink: 1;
+      background-color: #0066CC;
+    } 
+
+    .child2 {
+      flex-basis: 300px;
+      flex-shrink: 3;
+      background-color: #009900;
+    }
+
+    .child3 {
+      flex-basis: 500px;
+      flex-shrink: 2;
+      background-color: #CC3300;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child1">100px - 15px</div>
+    <div class="child2">300px - 135px</div>
+    <div class="child3">500px - 150px</div>
+  </div>
+</body>
+
+</html>
