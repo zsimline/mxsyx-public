@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="mxsyx">
+  <title>p11-1</title>
+  <style>
+    #p11-1 {
+      overflow: hidden;
+      transition: height 1s;
+      margin: 0px;
+      padding-left: 0px;
+    }
+    #p11-1 li {
+      font-size: 16px;
+      color: #ffffff;
+      line-height: 30px;
+      text-align: center;
+      margin: 0px;
+    }
+
+    #p11-1-btn {
+      cursor: pointer;
+      background-color: #dcdcdc;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="p11-1-btn" onclick="toggleByHeight()">▼点我展开</div>
+  <ul id="p11-1" style="height: 0px;">
+    <li style="background: #FF6666">第一</li>
+    <li style="background: #FF9900">第二</li>
+    <li style="background: #CCFF00">第三</li>
+    <li style="background: #CC3399">第四</li>
+  </ul>
+
+  <script>
+    function toggleByHeight() {
+      const containerStyle = document.querySelector('#p11-1').style;
+      const buttonExpand = document.querySelector('#p11-3-btn');
+      if (containerStyle.height == '0px') {
+        containerStyle.height = '120px';
+        buttonExpand.innerText = '▲点我收起';
+      } else {
+        containerStyle.height = '0px';
+        buttonExpand.innerText = '▼点我展开 ';
+      }
+    }
+  </script>
+</body>
+
+</html>
